@@ -4,14 +4,14 @@ let todoList = document.getElementById("todoList");
 
 addTodoBtn.addEventListener('click', addToDo);
 todoInput.addEventListener('keypress', function(e){
-    if (e.key == "Enter"){
+    if (e.key === "Enter"){
         addToDo(this.value);
     }
 })
 
 function addToDo(value){
     const todoText = todoInput.value.trim();
-    if (todoText != ""){
+    if (todoText !== ""){
         let li = document.createElement("li");
         li.textContent = todoText;
         todoList.appendChild(li);
